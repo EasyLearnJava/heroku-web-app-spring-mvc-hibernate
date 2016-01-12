@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = AppConfig.class)
 public class AppConfigTest {
 
-	@Autowired
+	@Autowired(required = true)
 	private String message;
-	
+
 	@Test
 	public void shouldGetBeanMessage() {
 		Assert.assertNotNull(message);

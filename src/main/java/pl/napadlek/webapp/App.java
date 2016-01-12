@@ -1,18 +1,16 @@
 package pl.napadlek.webapp;
 
+import java.util.Arrays;
+
+import org.apache.commons.logging.LogFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-    	@SuppressWarnings("resource")
+public class App {
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-    	System.out.println(context.getBean(String.class));
-    }
+		Arrays.asList(context.getBeanDefinitionNames()).forEach(s -> LogFactory
+				.getLog(App.class).info(s + " bean definition exists upon startup."));
+	}
 }
