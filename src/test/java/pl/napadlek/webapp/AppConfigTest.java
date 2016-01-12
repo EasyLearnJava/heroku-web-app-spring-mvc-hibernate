@@ -13,10 +13,20 @@ public class AppConfigTest {
 
 	@Autowired(required = true)
 	private String message;
+	
+	@Autowired
+	private Author author;
 
 	@Test
 	public void shouldGetBeanMessage() {
 		Assert.assertNotNull(message);
 		Assert.assertEquals("Hello world!", message);
+	}
+	
+	@Test
+	public void shouldGetPrimaryAuthor() {
+		Assert.assertNotNull(author);
+		Assert.assertEquals("Mark", author.getFirstName());
+		Assert.assertEquals("Twain", author.getLastName());
 	}
 }

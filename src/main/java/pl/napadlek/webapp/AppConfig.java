@@ -25,4 +25,12 @@ public class AppConfig {
 	public CacheManager cacheManager() {
 		return new EhCacheCacheManager();
 	}
+	
+	@Bean
+	public Author famousAuthor() {
+		Author author = new Author();
+		author.setFirstName("Mark");
+		author.setLastName("Twain");
+		return author;
+	}
 }
