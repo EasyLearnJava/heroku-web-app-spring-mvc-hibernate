@@ -20,6 +20,11 @@ public class AppConfig {
 	public String stringTestBean() {
 		return "Hello world!";
 	}
+	
+	@Bean
+	public String anotherString() {
+		return "Hi there!";
+	}
 
 	@Bean
 	public CacheManager cacheManager() {

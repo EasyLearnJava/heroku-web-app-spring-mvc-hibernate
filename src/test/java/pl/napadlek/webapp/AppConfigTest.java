@@ -16,7 +16,7 @@ public class AppConfigTest {
 	
 	@Autowired
 	private Author author;
-
+	
 	@Test
 	public void shouldGetBeanMessage() {
 		Assert.assertNotNull(message);

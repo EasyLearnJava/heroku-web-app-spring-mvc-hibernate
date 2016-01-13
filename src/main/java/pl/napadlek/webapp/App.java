@@ -15,6 +15,6 @@ public class App {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		Arrays.asList(context.getBeanDefinitionNames())
 				.forEach(s -> LOG.info(s + " bean definition exists upon startup."));
-		LOG.info(context.getBean("stringTestBean").getClass());
+		LOG.info(context.getBean(String.class));
 	}
 }
