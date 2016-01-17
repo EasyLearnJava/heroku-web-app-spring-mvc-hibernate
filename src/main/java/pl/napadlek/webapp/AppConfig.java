@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 @ComponentScan(basePackages = "pl.napadlek.webapp")
 @EnableAspectJAutoProxy
-@EnableCaching
 public class AppConfig {
 
 	@Bean
@@ -24,11 +23,6 @@ public class AppConfig {
 	@Bean
 	public String anotherString() {
 		return "Hi there!";
-	}
-
-	@Bean
-	public CacheManager cacheManager() {
-		return new EhCacheCacheManager();
 	}
 	
 	@Bean
