@@ -3,7 +3,7 @@ package pl.napadlek.webapp.web.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -14,11 +14,10 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import pl.napadlek.webapp.AppConfig;
-
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = "pl.napadlek.webapp")
+@Profile("dev")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
