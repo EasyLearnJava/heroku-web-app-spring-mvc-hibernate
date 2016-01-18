@@ -25,7 +25,7 @@ public class JettyRunner {
     private static final String DEFAULT_PROFILE = "dev";
 
     public static void main(String[] args) throws Exception {
-        new JettyRunner().startJetty(DEFAULT_PORT);
+        new JettyRunner().startJetty(args.length == 0 ? DEFAULT_PORT : Integer.parseInt(args[0]));
     }
 
     private void startJetty(int port) throws Exception {
