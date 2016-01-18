@@ -19,7 +19,7 @@ public class JettyRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(JettyRunner.class);
 
-    private static final int DEFAULT_PORT = 9999;
+    private static final int DEFAULT_PORT = 8000;
     private static final String CONTEXT_PATH = "/";
     private static final String MAPPING_URL = "/*";
     private static final String DEFAULT_PROFILE = "dev";
