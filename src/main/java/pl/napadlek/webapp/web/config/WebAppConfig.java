@@ -17,16 +17,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = "pl.napadlek.webapp")
-@Profile("dev")
+@Profile(value = { "dev", "test" })
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
-	public ObjectMapper jacksonMapper() {
+	public ObjectMapper jacksonObjectMapper() {
 		return new Jackson2ObjectMapperFactoryBean().getObject();
 	}
-	
+
 	@Bean
-	public ViewResolver thymeleafResolver() {
+	public ViewResolver thymeleafViewResolver() {
 		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
 		SpringTemplateEngine engine = new SpringTemplateEngine();
 		ServletContextTemplateResolver contextResolver = new ServletContextTemplateResolver();
