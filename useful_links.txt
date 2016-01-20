@@ -1,3 +1,4 @@
 http://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/
 https://github.com/spring-projects/spring-boot
 https://github.com/spring-projects/spring-framework
+https://github.com/heroku/template-java-spring-hibernate/blob/master/src/main/resources/applicationContext.xml
